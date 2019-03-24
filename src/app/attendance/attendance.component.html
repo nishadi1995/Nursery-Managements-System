@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <html>
+    <title>W3.CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <body>
+
+    <div class="w3-container">
+        <h2>STUDENT ATTENDENCE</h2>
+
+
+        <table class="w3-table-all w3-large">
+            <tr class="table-dark">
+            <tr>
+                <th>Student Name</th>
+                <th></th>
+            </tr>
+
+            <li *ngFor="let s of std | async">
+            <tr>
+                <td>{{s.stdName}}</td>
+                <td class="space">
+                    <button class ="btn btn-outline-info">Present</button>
+                    <button class ="btn btn-outline-info">Absent</button>
+                </td>
+            </tr>
+            </li>
+
+        </table>
+        <br>
+        <br>
+          <button class ="btn btn-outline-info" align="right"  >Submit</button>
+    </div>
+    <br>
+    <br>
+
+    <tr>
+        <td>ABSENTIES</td>
+        <td><input type="text" name="absent" maxlength="30"/>
+
+        </td>
+    </tr>
+    <tr>
+        <td>PRESENTIES</td>
+        <td><input type="text" name="present" maxlength="30"/>
+
+        </td>
+    </tr>
+
+    </body>
+    </html>

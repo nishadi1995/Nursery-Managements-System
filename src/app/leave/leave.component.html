@@ -1,0 +1,79 @@
+<html>
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class= "topheader" >
+        <p><b>Leave Management </b></p>
+    </div>
+<div class="container">
+  
+  <h2 class="text-center">Leave Management</h2>
+  <p class="text-center"><em>-----Do not Exceed 45 leaves for year-----</em></p><br>
+  <div class="row test">
+    <div class="col-md-4">
+      
+      <img src="/assets/leaves.jpg"  class="img">
+    
+  </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-4 form-group">
+          <input class="form-control" id="text" [(ngModel)]="checkID" name="id" placeholder="Employee ID" type="eid" required><br><br>
+        </div>
+
+        <div class="col-sm-2 form-group">
+          <button class="btn btn-primary btn" type="submit" (click)="search()"><b>-></b>  </button>
+        </div>        
+      </div>
+
+      <li *ngFor="let p of leaveSt | async">
+
+      <div class="row">
+        <div class="col-sm-4 form-group">
+          <p>Total Leaves for year:</p>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input type="text" class="form-control" id="basic"  name="basic" value="{{p.total_leaves}}">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 form-group">
+          <label  for="ot" >Current Total leaves:</label>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input type="text" class="form-control" id="ot"  name="ot" value="{{p.taken}}">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-4 form-group">
+          <label  for="total">Remaining leaves:</label>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input type="text" class="form-control" id="total"  name="total" value="{{p.total_leaves- p.taken}}">
+        </div>
+      </div>
+      </li>
+
+      <div class="row">
+        <div class="col-sm-4 form-group"></div>
+        <div class="col-sm-4 form-group"></div>
+        <div class="col-sm-4 form-group">
+          <button class="btn btn-primary btn" type="submit" (click)="update()"> Add Leave  </button>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+<img src="/assets/leaveb.jpg" class="img-responsive" style="width:100%">
+
+<footer class="w3-container w3-theme-d5">
+    <p>Made by group 8</p>
+</footer>
+</body>
+</html>
+

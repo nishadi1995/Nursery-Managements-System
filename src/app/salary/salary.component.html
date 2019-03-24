@@ -1,0 +1,104 @@
+<html>
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+ <div class= "topheader" >
+   <p><b>Year Plan </b></p>
+ </div>
+  
+<div class="container">
+ 
+  <h2 class="text-center">Salary Payments</h2>
+  <p class="text-center"><em>-----Monthly Payments-----</em></p><br>
+  <div class="row test">
+    <div class="col-md-4">
+      <img src="/assets/payroll.jpg" width="300px" height="300px">
+    </div>
+    <div class="col-md-8">
+      <div class="row" >
+        
+        <div class="col-sm-3 form-group">
+            
+              <select class="form-control" [(ngModel)]="month" name="month">
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+                </select>
+            
+        </div>
+        <div class="col-sm-3 form-group">
+          <input class="form-control" id="text" [(ngModel)]="id" name="id" placeholder="Employee ID" type="eid" required><br><br>
+        </div>
+      
+          <div class="col-sm-2 form-group">
+            <button class="btn btn-primary btn" (click)="onSubmit1()" type="submit"><b>-></b>  </button>
+          </div>
+        
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-4 form-group">
+          <p>  Basic Salary:</p>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input type="text" class="form-control" id="basic"  name="basic">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 form-group">
+          <label  for="ot" >  Over Time Payments:</label>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input type="text" [(ngModel)]="ot" class="form-control" id="ot"  name="ot">
+        </div>
+      </div>
+      <!-- <div class="row">
+        <div class="col-sm-4 form-group">
+          <label  for="ot" >  Over Time Payments:</label>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input type="text" [(ngModel)]="ot" class="form-control" id="ot"  name="ot">
+        </div>
+      </div>
+       -->
+      <div class="row">
+        <div class="col-sm-4 form-group">
+          <label  for="total">  Totla Salary:</label>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input type="text"  class="form-control" id="total" [(ngModel)]="total" name="total">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4 form-group"></div>
+        <div class="col-sm-4 form-group"></div>
+        <div class="col-sm-4 form-group">
+          <button class="btn btn-primary btn" type="submit" (click)="onSubmit()">  pay  </button>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+<img src="/assets/salary.jpg" class="img-responsive" style="width:100%">
+
+<footer class="w3-container w3-theme-d5">
+    <p>Made by group 8</p>
+</footer>
+
+</body>
+</html>

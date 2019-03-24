@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+</head>
+
+
+<body class="w3-theme-l5">
+
+<div class= "topheader" >
+   <p><b> News Forum </b> </p>
+</div>
+
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    
+    <div class="w3-col m3">
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+         <h4 class="w3-center">Add Post</h4>
+         <hr>
+        <form name="post_form">
+          <div class="form_group">
+              <input type="text" [(ngModel)]="title" class="text-control" id="title" placeholder=" title.." name="title">
+          </div>
+
+          <div class="form_group">
+              <textarea [(ngModel)]="onepost" class="form-control" id="onepost" placeholder="Post.." name="onepost" ></textarea>
+          </div> 
+         <button type="submit"  class="button button1" (click)="onSubmit()">Submit</button>
+       </form>              
+        </div>
+      </div>
+      <br>
+      
+      <div class="w3-card w3-round">
+        <div class="w3-container">
+            <h4 class="w3-center">Add Event</h4>
+            <hr> 
+          <form name="event_form">
+              <div class="form_group">
+                  <input type="text" [(ngModel)]="e_title" class="text-control" id="e_title" placeholder=" title.." name="e_title">
+              </div>
+              <div class="form_group">
+                  <input type="date" [(ngModel)]="eventDate" class="date-control" id="eventDate" placeholder=" event date.." name="eventDate">
+              </div>
+
+              <button type="submit"  class="button button1" (click)="onSubmit2()">Submit</button>
+          </form>         
+        </div>      
+      </div>
+      <br>
+                  
+      
+    <!-- End Left Column -->
+    </div>
+    
+    <!-- Middle Column -->
+    <div class="w3-col m7">
+        <li *ngFor="let p of post | async">
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="/assets/homeimg.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+       
+        <h6><b>{{p.title}}</b></h6> <br>  
+
+        <a class="btn" (click)="onDelete()" >
+          <i class="fa fa-trash-o"></i>
+        </a><br>
+
+        <h6> {{p.date}}</h6>
+        <hr class="w3-clear">
+        <p>{{p.post}}</p>
+
+        </div>
+    </li>
+      
+    <!-- End Middle Column -->
+    </div>
+    
+    <!-- Right Column -->
+    <div class="w3-col m2">
+      <li *ngFor= "let e of event | async">
+
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p><b>Upcoming Event</b></p>
+          <img src="/assets/homeimg5.jpg" alt="Forest" style="width:100%;">
+          <p><strong>{{e.event}}</strong></p>
+          <p>{{e.date}}</p>
+        </div>
+      </div>
+      <br>
+     </li>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+<!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+  <h5>Footer</h5>
+</footer>
+
+<footer class="w3-container w3-theme-d5">
+  <p>Made by group 8</p>
+</footer>
+
+</body>
+</html> 

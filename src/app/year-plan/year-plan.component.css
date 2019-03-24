@@ -1,0 +1,132 @@
+
+.topheader{
+    background:  rgb(223, 119, 119);
+    position: fixed;
+    width: 40cm;
+    top: 0%;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  
+  .text-control {
+    margin-bottom:8px;
+    background-color: #f8f8f8;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  
+  .button {
+    background-color: lightsalmon; /* Green */
+    color: white;
+    padding: 3px 20px;
+    text-align: center;
+    align-content: center;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 8px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+  
+  html,body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Open Sans", sans-serif
+  }
+  
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    /*background-color: black;*/
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  input[type=text] {
+    width: 50%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    height: 30px;
+    border-radius: 5px;
+  }
+  input[type=date] {
+    width: 50%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    height: 30px;
+    border-radius: 5px;
+  }
+  
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  
+  a {
+    color: dodgerblue;
+  }
+  
+  /* Set a grey background color and center the text of the "sign in" section */
+  .signin {
+    background-color: #f1f1f1;
+    text-align: center;
+  }
+  
+  form{
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(233, 120, 120);
+  }
+  
+   table {
+    width: 100%;
+    text-align: center;
+  }
+   td, th {
+    border-bottom: 1px solid lightgray;
+    padding: 12px;
+   }
+  
+   thead {
+     font-family: monospace;
+     color: orangered;
+     font-size: 23px;
+   }
+  .table-body {
+    text-align: center;
+    font-size: 15px;
+    color: rgb(134, 134, 134);
+  }
+  
+  h3 {
+    color:  rgb(102, 102, 102);
+  }
+  .btn {
+    padding: 15%;
+  }
+  
+  
+  
+  
+  .w3-theme-l4 {color:#000 !important; background-color:#dfe5e8 !important}
+  .w3-theme-d3 {color:#fff !important; background-color:rgb(245, 171, 125) !important}
+  .w3-theme-d5 {color:#fff !important; background-color:#303e45 !important}
+  

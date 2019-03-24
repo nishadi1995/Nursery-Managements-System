@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body class="w3-theme-l5">
+
+<div class= "topheader" >
+   <p><b> Year Plan Managing </b> </p>
+</div>
+
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1000px;margin-top:80px">
+  <div class="w3-row">
+    <!-- Middle Column -->
+        <form name="programForm">
+          <div class="container">
+            <h3>Add Year Programmes..</h3>
+            <hr>
+
+            <label for="event"><b>Event : </b></label>
+            <input [(ngModel)]="program" type="text"  name="event" placeholder="enter the events " >
+            <br>
+
+            <label for="Date"><b>Month : </b></label>
+            <input [(ngModel)]="date" type="text"  name="date"  placeholder="enter the month" >
+            <br>
+
+            <button type="submit"  class="button button2" (click)="onSubmit()">Add</button>
+          </div>
+        </form>
+
+        <div><h3>Year Plan</h3></div>
+
+        <div class= "table">
+            <table class="table" >
+              <thead class="table-head" >
+                <tr>
+                <th> Month </th>
+                <th> Programmes</th>
+                <th></th>
+              </tr>
+              </thead>
+              <tbody class="table-body">
+                  <tr *ngFor= "let x of yearPlan | async "><td> {{x.month}} </td><td> {{x.program}}</td>
+                    <td><a class="btn" >
+                           <i class="fa fa-pencil-square-o"></i>
+                        </a>
+                        <a class="btn" >
+                           <i class="fa fa-trash-o"></i>
+                        </a>
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+        </div>
+
+
+            <!-- End Middle Column -->
+  </div>
+
+<!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+  <h5></h5>
+</footer>
+
+<footer class="w3-container w3-theme-d5">
+  <p>Made by group 8</p>
+</footer>
+
+</body>
+</html>
