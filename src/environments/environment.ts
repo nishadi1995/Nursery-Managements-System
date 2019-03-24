@@ -5,12 +5,6 @@
 export const environment = {
   production: false,
   firebase:{
-    apiKey: "AIzaSyCjNuhA87DrjOJh0vgK9YWMmoBfyKxuDfo",
-    authDomain: "nursery-management-system.firebaseapp.com",
-    databaseURL: "https://nursery-management-system.firebaseio.com",
-    projectId: "nursery-management-system",
-    storageBucket: "nursery-management-system.appspot.com",
-    messagingSenderId: "16830765908"
    //db credentials
   }
 
